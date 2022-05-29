@@ -7,13 +7,15 @@
 
 <form action="/app_coder/search" method="GET">
     <div>
-        <input type="text" name="movie_name" id="movie_name" placeholder="Busqueda por pelicula">
+        <input type="text" name="movie_search" id="movie_name" placeholder="Busqueda por pelicula">
         <input type="submit" value="Buscar Pelicula">
     </div>
+
     <div>
-        <input type="text" name="genre_name" id="genre_name" placeholder="Busqueda por genero">
+        <input type="text" name="genre_search" id="genre_name" placeholder="Busqueda por genero">
         <input type="submit" value="Buscar Genero">
     </div>
+
     <div>
         <input type="text" name="all_search" id="name_or_genre" placeholder="Busqueda general">
         <input type="submit" value="Buscar">
@@ -22,16 +24,25 @@
 
 <hr></hr>
 
-{% if pelicula %}
+{% if peliculas %}
     <ul>
-        {% for Pelicula in peliculas %}
+        {% for pelicula in peliculas %}
             <li>
-                Pelicula: {{Pelicula.name}} 
-                -- Genero: {{Pelicula.genre}}
-                -- Year: {{Pelicula.year}}
+                Pelicula: {{pelicula.name}} 
+                -- Genero: {{pelicula.genre}}
+                -- Year: {{pelicula.year}}
             </li>
         {% endfor %}
     </ul>
+{% elif genres %}
+<ul>
+    {% for genre in genres %}
+        <li>
+            Name: {{genre.name}} 
+            -- Movie: {{genre.movies}}
+        </li>
+    {% endfor %}
+</ul>
 {% endif %}
 
 {% endblock %}

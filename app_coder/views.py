@@ -170,25 +170,28 @@ def pelicula_forms_django(request):
 
 def search(request):
     context_dict = dict()
-    if request.GET['movie_name']:
-        search_param = request.GET['movie_name']
+    if request.GET['movie_search']:
+        search_param = request.GET['movie_search']
         peliculas = Pelicula.objects.filter(name__contains=search_param)
+        print(peliculas)
         context_dict = {
-            'Pelicula': peliculas
+            'peliculas': peliculas
         }
-    elif request.GET['genre_name']:
-        search_param = request.GET['genre_name']
-        genre = Genre.objects.filter(name__contains=search_param)
+    elif request.GET['genre_search']:
+        search_param = request.GET['genre_search']
+        genres = Genre.objects.filter(name__contains=search_param)
+        print(genres)
         context_dict = {
-            'Genre': genre
+            'genres': genres
         }
     elif request.GET['all_search']:
         search_param = request.GET['all_search']
         query = Q(name__contains=search_param)
         query.add(Q(genre__contains=search_param), Q.OR)
+        print(query)
         peliculas = Pelicula.objects.filter(query)
         context_dict = {
-            'Pelicula': peliculas
+            'peliculas': peliculas
         }
 
     return render(
