@@ -19,9 +19,9 @@
 
   <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/{{YOUR_GITHUB_USERNAME}}/buscadorpelis?color=56BEB8" /> -->
 
-  <img alt="Github forks" src="https://img.shields.io/github/forks/Doneuno/buscadorpelis?color=56BEB8" /> -->
+  <img alt="Github forks" src="https://img.shields.io/github/forks/Doneuno/buscadorpelis?color=56BEB8" />
 
-  <img alt="Github stars" src="https://img.shields.io/github/stars/Doneuno/buscadorpelis?color=56BEB8" /> -->
+  <img alt="Github stars" src="https://img.shields.io/github/stars/Doneuno/buscadorpelis?color=56BEB8" />
 </p>
 
 <!-- Status -->
@@ -46,24 +46,21 @@
 
 ## :dart: About ##
 
-About
 Buscador de peliculas creado clase python coderhouse
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Django html Template;\
+:heavy_check_mark: Search Database by Movie Genre;\
+:heavy_check_mark: Create New Movie
+
 
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
-- [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Python](https://www.python.org/)
+- [Django](https://www.djangoproject.com/)
 
 ## :white_check_mark: Requirements ##
 
