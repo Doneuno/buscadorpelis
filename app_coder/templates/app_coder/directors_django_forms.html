@@ -1,0 +1,22 @@
+{% extends "app_coder/index.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+<h2>Formulario para insersión de un nuevo Director</h2>
+<hr></hr>
+{% if directors_form.errors %}
+    <p style="color: red">Por favor revisar los datos, están mal</p>
+{% endif %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    <table>
+        {{ directors_form.as_table }}
+    </table>
+
+    <input type="submit" class="btn btn-primary" value="Crear Director" />
+
+</form>
+
+{% endblock %}

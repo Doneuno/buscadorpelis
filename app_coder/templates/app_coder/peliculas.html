@@ -1,0 +1,18 @@
+{% extends "app_coder/index.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+<h2>Lista de peliculas</h2>
+<a class="card_custom" href="{% url 'PeliculaDjangoForms' %}">Crear nueva Pelicula</a>
+<hr></hr>
+<ul>
+    {% for Pelicula in peliculas %}
+        <li>
+            Pelicula: {{Pelicula.name}} 
+            -- Genero: {{Pelicula.genre}}
+            -- Year: {{Pelicula.year}}
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

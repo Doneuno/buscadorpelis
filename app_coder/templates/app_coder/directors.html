@@ -1,0 +1,17 @@
+{% extends "app_coder/index.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+<h2>Lista de Directores</h2>
+<a class="card_custom" href="{% url 'DirectorsDjangoForms' %}">Crear nuevo Director</a>
+<hr></hr>
+<ul>
+    {% for director in directors %}
+        <li>
+            Director: {{director.name}} {{director.last_name}}
+            ---Movies: {{director.movies}}
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

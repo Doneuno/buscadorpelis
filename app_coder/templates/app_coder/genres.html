@@ -1,0 +1,17 @@
+{% extends "app_coder/index.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+<h2>Lista de Generos</h2>
+<a class="card_custom" href="{% url 'GenreDjangoForms' %}">Crear nuevo Genero de peliculas</a>
+<hr></hr>
+<ul>
+    {% for genre in genres %}
+        <li>
+            Genre: {{genre.name}}
+            -- Movie: {{genre.movies}}
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
